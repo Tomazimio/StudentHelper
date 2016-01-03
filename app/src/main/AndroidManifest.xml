@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.venedi.studenthelper.studenthelper">
+    package="net.venedi.main">
 
     <application
         android:allowBackup="true"
@@ -9,23 +9,57 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".StudentExamsActivity"
+            android:name=".ExamsActivity"
+            android:configChanges="orientation"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ExamDetails"
+            android:name=".ExamDetailsActivity"
+            android:configChanges="orientation"
             android:label="Exam Details"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".StudentExamsActivity">
+            android:parentActivityName=".ExamsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StudentExamsActivity" />
+                android:value="net.venedi.main.ExamsActivity" />
         </activity>
+        <activity
+            android:name=".ExamEditActivity"
+            android:configChanges="orientation"
+            android:label="Exam Edit"
+            android:parentActivityName=".ExamsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.venedi.main.ExamsActivity" />
+        </activity>
+
+        <activity
+            android:name=".CourseListActivity"
+            android:configChanges="orientation"
+            android:label="Courses"
+            android:parentActivityName=".ExamEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.venedi.main.ExamEditActivity" />
+        </activity>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
     </application>
 
 </manifest>

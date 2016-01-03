@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.venedi.main.ExamDetailsActivity"
+    tools:showIn="@layout/activity_exam_edit"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exam Title"
+        android:id="@+id/tvDescription"
+        android:minWidth="140dp"
+        android:nestedScrollingEnabled="true"
+        android:gravity="bottom"
+        android:height="30dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDescription"
+        android:minHeight="30dp"
+        android:editable="false"
+        android:enabled="true"
+        android:hint="Enter exam title"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:elegantTextHeight="false"
+        android:capitalize="words"
+        android:layout_below="@+id/tvDescription"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Course"
+        android:id="@+id/tvCourseLabel"
+        android:minWidth="140dp"
+        android:nestedScrollingEnabled="true"
+        android:gravity="bottom"
+        android:height="30dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/etDescription"
+        android:layout_alignLeft="@+id/etDescription"
+        android:layout_alignStart="@+id/etDescription" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etCourse"
+        android:minHeight="30dp"
+        android:editable="false"
+        android:enabled="true"
+        android:hint="Select course"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:elegantTextHeight="false"
+        android:capitalize="words"
+        android:layout_below="@+id/tvCourseLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exam Date"
+        android:id="@+id/tvExamDate"
+        android:minWidth="100dp"
+        android:nestedScrollingEnabled="true"
+        android:gravity="bottom"
+        android:layout_below="@+id/etCourse"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:height="30dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"
+        android:layout_toStartOf="@+id/tvExamTime"
+        android:layout_toLeftOf="@+id/tvExamTime" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etDate"
+        android:layout_below="@+id/tvExamDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_toLeftOf="@+id/etTime"
+        android:layout_toStartOf="@+id/etTime"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exam Date"
+        android:id="@+id/tvExamTime"
+        android:minWidth="140dp"
+        android:nestedScrollingEnabled="true"
+        android:gravity="bottom|right"
+        android:layout_below="@+id/etCourse"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:height="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/etTime"
+        android:layout_alignTop="@+id/etDate"
+        android:layout_alignRight="@+id/tvExamTime"
+        android:layout_alignEnd="@+id/tvExamTime"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_toRightOf="@+id/tvExamDate"
+        android:layout_toEndOf="@+id/tvExamDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exam mark:"
+        android:id="@+id/tvEvaluation"
+        android:minWidth="140dp"
+        android:nestedScrollingEnabled="true"
+        android:minHeight="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/tvExamDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/etMark"
+        android:minHeight="30dp"
+        android:editable="false"
+        android:enabled="true"
+        android:hint="Enter mark"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:inputType="number"
+        android:layout_toRightOf="@+id/tvEvaluation"
+        android:layout_toEndOf="@+id/tvEvaluation"
+        android:layout_below="@+id/etDate"
+        android:layout_alignBottom="@+id/tvEvaluation" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is exam failed"
+        android:id="@+id/cbExamFailed"
+        android:layout_below="@+id/tvEvaluation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/etMark"
+        android:layout_alignEnd="@+id/etMark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:id="@+id/tvNotes"
+        android:minWidth="140dp"
+        android:nestedScrollingEnabled="true"
+        android:gravity="bottom"
+        android:layout_below="@+id/cbExamFailed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"
+        android:height="30dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etNote"
+        android:minHeight="100dp"
+        android:editable="false"
+        android:enabled="true"
+        android:hint="Enter notes..."
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:gravity="left|top"
+        android:minLines="5"
+        android:nestedScrollingEnabled="true"
+        android:lines="5"
+        android:layout_below="@+id/tvNotes"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
